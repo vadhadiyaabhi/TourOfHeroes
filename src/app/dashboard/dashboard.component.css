@@ -1,0 +1,22 @@
+.top-heroes{
+    display: inline-block;
+}
+
+.top-heroes span{
+    padding: 10px 15px;
+    border-radius: 7px;
+    display: inline-block;
+    margin: 10px;
+    width: auto;
+    background-color: rgb(255, 155, 172);
+    color: white;
+}
+
+.top-heroes span:hover{
+    background-color: rgb(255, 115, 138);
+    cursor: pointer;
+}
+
+.names:hover{
+    cursor: pointer;
+}

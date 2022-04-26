@@ -1,0 +1,15 @@
+<div *ngIf="hero.id; else elseBlock">
+    <h2>{{hero?.name}} Details</h2>
+    <h4>Id: {{hero?.id}}</h4>
+    <form (ngSubmit)="editHero()">
+        <h3 class="fw-bold text-secondary d-inline-block">Hero Name:</h3><input type="text" name="name" class="form-control" [(ngModel)]="hero.name"> <br>
+        <h3 class="fw-bold text-secondary d-inline-block">Description</h3> <textarea class="form-control" name="desc" id="" cols="30" rows="2" [(ngModel)]="hero.desc"></textarea> <br>
+        <div class=""><mat-checkbox name="top" [(ngModel)]="hero.top" id="top" class="example-margin"></mat-checkbox><label class="fw-bold text-secondary d-inline-block ms-3" for="top">Mark as Top Hero:</label></div> <br>
+        <button class="m-3" type="button" color="link" mat-raised-button (click)="goBack()">Go Back</button>
+        <button type="submit" color="accent" mat-raised-button>Save</button>
+    </form>
+</div>
+<ng-template #elseBlock>
+    <h3 class="fw-bold text-secondary">Hero doesn't exist for given id</h3>
+    <button class="m-3" type="button" color="link" mat-raised-button (click)="goBack()">Go Back</button>
+</ng-template>

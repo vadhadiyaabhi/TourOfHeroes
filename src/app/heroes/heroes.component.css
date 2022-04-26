@@ -1,0 +1,40 @@
+.hero{
+    display: flex;
+    width: 200px !important;
+    margin: 0px;
+    background-color: rgb(255, 238, 241);
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    border-radius: 7px;
+}
+
+
+.index{
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.hero > div{
+    padding: 7px;
+}
+
+.hero:hover{
+    position: relative;
+    left: 3px;
+    box-shadow: 2px 2px 8px rgb(255, 185, 185);
+}
+
+.selected{
+    background-color: rgb(255, 209, 217);
+    position: relative;
+    left: 3px;
+    box-shadow: 2px 2px 8px rgb(255, 185, 185);
+}
+

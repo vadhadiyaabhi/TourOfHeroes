@@ -1,0 +1,19 @@
+<div>
+    <h2 class="text-center">Top Heroes</h2>
+    <div class="text-center">
+        <div class="top-heroes" routerLink="/heroes/{{hero.id}}" *ngFor="let hero of heroes">
+            <span>{{hero.name}}</span>
+        </div>
+    </div>
+</div>
+
+<div class="container" (mouseout)="emptyNames()">
+    <div class="search container" >
+        <h2 class="text-secondary">Search Hero </h2>
+        <input type="text" class="form-control" #name (keyup)="keyUp(name.value)" name="search" id="search">
+        <input type="text" class="form-control names" #name *ngFor="let hero of names" value="{{hero.name}}" routerLink="/heroes/{{hero.id}}">
+      
+    </div>
+</div>
+
+<!-- Safe routing -->

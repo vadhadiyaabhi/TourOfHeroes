@@ -1,0 +1,21 @@
+<h2 class="my-3">My Heroes</h2>
+
+<div>
+    <form #heroForm="ngForm" (ngSubmit)="AddNewHero()">
+        <div class="mb-3">
+            <label for="name" class="form-label">Hero Name</label>
+            <input type="text" class="form-control mb-2" name="name" required [(ngModel)]="name" id="name" placeholder="Please Enter Name Your Hero">
+            <textarea type="text" class="form-control" required name="desc" id="" [(ngModel)]="desc" placeholder="Enter Your Hero's Description here"></textarea>
+            <small class="text-danger" [class.d-none]="error">Please provide value for all input fields</small>
+            <button class="my-3 d-block" type="submit" mat-raised-button color="primary"><strong>+</strong>  Add Hero</button>
+          </div>
+    </form>
+
+    <div class="p-3 d-inline-block text-center" *ngFor="let hero of heroes">
+        <div color="link" class="hero fw-bold" type="button" [class.selected]="isSelected(hero)">
+            <div routerLink="/heroes/{{hero.id}}" class="index">{{hero.id}}</div>
+            <div routerLink="/heroes/{{hero.id}}" class="">{{hero.name}}</div>
+            <div><button class="btn-sm" type="button" mat-mini-fab color="" (click)="deleteHero(hero)"><mat-icon>delete</mat-icon></button></div>
+        </div>
+    </div>
+</div>
